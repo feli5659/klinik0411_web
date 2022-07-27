@@ -1,0 +1,494 @@
+/* ----------------- GENERAL STYLES ----------------------- */
+html {
+  font-family: "PT Sans Narrow", sans-serif;
+
+  /* farvevariabler */
+  --green: #739066;
+  --darkgreen: #0e4628;
+  --pink: #f8e7e7;
+  --beige: #fdfdf7;
+
+  /* gapvariabler */
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 3rem;
+  --space-xl: 4rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: var(--pink);
+  margin: 0 auto;
+  /* max-width: 1200px; */
+}
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  line-height: 2;
+}
+
+/* ---------------- NAV MENU ---------------*/
+
+.logo {
+  margin-inline: 40px;
+}
+
+.nav-menu li {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  list-style: none;
+  font-size: 1.1rem;
+  text-align: center;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.navbar a:hover {
+  color: orange;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin-block: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--green);
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 30%;
+    font-size: 2rem;
+    margin-inline: 0;
+  }
+  .navbar {
+    padding: 20px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 130px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--pink);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin-block: 16px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+/* ------------------ scroll to top knap -------------------- */
+#top_knap {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--green); /* Set a background color */
+  color: var(--beige); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: 80%;
+}
+
+#top_knap:hover {
+  background-color: var(--darkgreen); /* Add a dark-grey background on hover */
+  opacity: 100%;
+}
+
+/* ------------------ FORSIDE MOBILFIRST -------------------- */
+
+.half-split h1 {
+  margin: 20px;
+  font-size: 2.5rem;
+  color: var(--darkgreen);
+}
+
+.half-split div {
+  margin-bottom: 20px;
+}
+
+.velkommen {
+  background-color: var(--green);
+  padding: 20px;
+  color: var(--darkgreen);
+}
+
+/* ------ Hvad er ansigtsrefleks ----- */
+.grid_1-2 {
+  background-color: var(--pink);
+  color: var(--darkgreen);
+  padding-bottom: 20px;
+}
+
+.grid_1-2 h2,
+.grid_1-2 p {
+  padding-inline: 20px;
+}
+
+.grid_2-1 div {
+  margin-bottom: 20px;
+}
+
+.button_micro a:hover {
+  color: var(--beige);
+}
+
+.button_micro {
+  background-color: #0e4628;
+  width: 30%;
+  height: 65px;
+  padding: 20px;
+  font-size: 1.3rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.button_micro_center a:hover {
+  font-size: 2rem;
+  color: var(--beige);
+}
+
+/* ------ Hvad er japansk lift ----- */
+.grid_2-1 {
+  background-color: var(--beige);
+  color: var(--darkgreen);
+  padding-top: 20px;
+}
+
+.grid_2-1 h2,
+.grid_2-1 p {
+  padding-inline: 20px;
+}
+
+/* ------ Det siger kunderne ----- */
+.kunder {
+  background-color: var(--green);
+  padding-top: 20px;
+  margin: 0;
+  text-align: center;
+  color: var(--darkgreen);
+}
+.reviews_flex {
+  display: flex;
+  text-align: center;
+  padding-inline: 20px;
+  padding-block: 40px;
+  gap: 10px;
+  background-color: var(--green);
+}
+.reviews_flex h3 {
+  color: var(--beige);
+}
+
+.reviews_flex img {
+  border-radius: 50%;
+}
+
+.button_micro_center {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.3rem;
+  background-color: var(--darkgreen);
+}
+
+/* ------ footer ----- */
+
+.grid_footer_3col {
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.ikoner {
+  display: flex;
+  width: 50%;
+  padding-top: 20px;
+}
+
+/* ------ SIDE 2 - Hvad er ansigtsrefleks ----- */
+
+.half-split_2 h1 {
+  margin: 20px;
+  font-size: 2.5rem;
+  color: var(--darkgreen);
+}
+
+.hvad_er_refleks {
+  color: var(--darkgreen);
+  background-color: var(--green);
+  padding: 20px;
+}
+
+.hvem_kan_behandles {
+  color: var(--darkgreen);
+  background-color: var(--beige);
+}
+
+.hvem_kan_behandles p {
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.overskrift {
+  text-align: center;
+  background-color: var(--green);
+  padding: 30px;
+  color: var(--darkgreen);
+  font-size: 2rem;
+}
+
+.fordele {
+  color: var(--darkgreen);
+}
+
+.fordele h2,
+.fordele ul {
+  padding-inline: 20px;
+}
+
+.fordele div {
+  margin-bottom: 20px;
+}
+
+.fordele li {
+  list-style: none;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 1000px) {
+  .logo {
+    width: 7%;
+    margin-top: 10px;
+  }
+  .half-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .half-split h1 {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 3.9rem;
+    margin-inline: 40px;
+  }
+  .half-split img {
+    grid-column: 2;
+    grid-row: span 3;
+    width: 100%;
+  }
+
+  .half-split div {
+    grid-row: 2;
+    margin-inline: 40px;
+    grid-column: 1;
+    margin-top: 290px;
+    margin-bottom: 30px;
+  }
+
+  .velkommen {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .velkommen p {
+    padding-inline: 350px;
+  }
+  /* ------ Hvad er ansigtsrefleks ----- */
+  .grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0;
+  }
+  .grid_1-2 img {
+    grid-column: 1;
+    grid-row: span 2;
+    width: 80%;
+  }
+  .grid_1-2 h2,
+  .grid_1-2 p {
+    margin-inline: 90px;
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .grid_1-2 p {
+    margin-top: 100px;
+  }
+  .grid_1-2 div {
+    grid-row: 2;
+    grid-column: 2;
+    margin-inline: 110px;
+  }
+
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0;
+  }
+  .grid_2-1 img {
+    grid-column: 2;
+    grid-row: span 2;
+  }
+
+  .grid_2-1 h2,
+  .grid_2-1 p {
+    margin-inline: 90px;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .grid_2-1 p {
+    margin-top: 100px;
+  }
+  .grid_2-1 div {
+    grid-row: 2;
+    grid-column: 1;
+    margin-inline: 110px;
+  }
+
+  .reviews_flex img {
+    width: 60%;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 20px;
+  }
+
+  .ikoner {
+    grid-column: 1;
+  }
+
+  .spoergsmaal {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* ------ SIDE 2 HVAD ER ANSIGTSREFLEKS ----- */
+
+  .half-split_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .half-split_2 h1 {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 3.9rem;
+
+    text-align: center;
+  }
+
+  .half-split_2 img {
+    grid-column: 1;
+    grid-row: span 3;
+    width: 100%;
+  }
+
+  .hvad_er_refleks {
+    padding-inline: 40px;
+  }
+
+  .hvem_kan_behandles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hvem_kan_behandles h2 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 2.5rem;
+    margin-left: 40px;
+  }
+  .hvem_kan_behandles p {
+    grid-column: 1;
+    grid-row: 2;
+    margin-inline: 40px;
+  }
+
+  .hvem_kan_behandles img {
+    grid-column: 2;
+    grid-row: span 3;
+  }
+
+  .fordele {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .fordele h2,
+  .fordele ul,
+  .fordele div {
+    grid-column: 1;
+    grid-row: 1;
+    margin-inline: 40px;
+  }
+  .fordele ul {
+    margin-top: 90px;
+  }
+  .fordele div {
+    margin-top: 350px;
+    margin-inline: 60px;
+  }
+  .fordele img {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
