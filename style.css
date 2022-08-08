@@ -446,6 +446,12 @@ a {
     padding-inline: 40px;
   }
 
+  .hvad_er_refleks p,
+  .hvad_er_refleks h2 {
+    text-align: center;
+    padding-inline: 250px;
+  }
+
   .hvem_kan_behandles {
     display: grid;
     grid-template-columns: 1fr 1fr;
