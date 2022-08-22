@@ -279,11 +279,12 @@ a {
 .hvem_kan_behandles {
   color: var(--darkgreen);
   background-color: var(--beige);
+  padding-bottom: 20px;
 }
 
-.hvem_kan_behandles p {
-  padding-bottom: 20px;
-  margin: 0;
+.hvem_kan_behandles p,
+.hvem_kan_behandles h2 {
+  padding-inline: 20px;
 }
 
 .overskrift {
@@ -293,13 +294,17 @@ a {
   color: var(--darkgreen);
   font-size: 2rem;
 }
+.overskrift p {
+  font-size: 1rem;
+}
 
 .fordele {
   color: var(--darkgreen);
 }
 
 .fordele h2,
-.fordele ul {
+.fordele ul,
+.fordele p {
   padding-inline: 20px;
 }
 
@@ -312,6 +317,12 @@ a {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 1.2rem;
   padding-bottom: 20px;
+}
+
+.fordele ul {
+  border: solid var(--darkgreen);
+  margin: 20px;
+  padding: 10px;
 }
 
 @media (min-width: 1000px) {
