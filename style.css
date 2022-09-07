@@ -330,7 +330,8 @@ a {
   margin: 20px;
   color: #0e4628;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .hvordan_fertilitet {
@@ -613,5 +614,4 @@ a {
     max-width: 60%;
     padding-top: 30px;
   }
-
 }
