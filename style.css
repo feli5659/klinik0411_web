@@ -425,7 +425,7 @@ a {
     grid-template-columns: 1fr 2fr;
     padding-bottom: 40px;
     border-bottom: 1px solid #0e4628;
-    margin-bottom: 50px;
+    margin-bottom: 28px;
   }
   .grid_1-2 img {
     grid-column: 1;
@@ -437,9 +437,11 @@ a {
     margin-inline: 20px;
     grid-row: 1;
     grid-column: 2;
+    margin-top: 0;
   }
+
   .grid_1-2 p {
-    margin-top: 100px;
+    margin-top: 55px;
     padding-bottom: 10px;
   }
   .grid_1-2 div {
@@ -463,10 +465,11 @@ a {
     grid-row: 1;
     grid-column: 1;
     padding-left: 0;
+    margin-top: 0;
   }
 
   .grid_2-1 p {
-    margin-top: 100px;
+    margin-top: 55px;
     padding-right: 50px;
   }
   .grid_2-1 div {
@@ -502,7 +505,7 @@ a {
   .half-split_2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 40px;
+    padding-block: 40px;
   }
 
   .half-split_2 h1 {
@@ -519,7 +522,7 @@ a {
   }
   .hvad_er_refleks {
     border-block: 1px solid #0e4628;
-    margin-block: 30px;
+    margin-bottom: 30px;
   }
   .hvad_er_refleks p,
   .hvad_er_refleks h2 {
@@ -595,7 +598,6 @@ a {
     padding-top: 30px;
     border-block: solid 1px var(--darkgreen);
     padding-bottom: 30px;
-    max-width: 80%;
   }
 
   .om_elaine p {
@@ -606,4 +608,10 @@ a {
     padding-bottom: 50px;
     border-bottom: solid 1px var(--darkgreen);
   }
+
+  .logo_2 {
+    max-width: 60%;
+    padding-top: 30px;
+  }
+
 }
